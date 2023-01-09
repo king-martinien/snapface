@@ -1,0 +1,10 @@
+.face-snap-card {
+  width: 35%;
+  padding: 1rem;
+  border: 1px solid #f2f2f2;
+  transition: 0.3s ease;
+
+  &.snapped {
+    background-color: rgb(218, 251, 218);
+  }
+}

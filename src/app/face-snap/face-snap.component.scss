@@ -1,10 +1,60 @@
 .face-snap-card {
-  width: 35%;
   padding: 1rem;
+  background-color: #fff;
   border: 1px solid #f2f2f2;
-  transition: 0.3s ease;
+  border-radius: 0.4rem;
+  height: 100%;
 
   &.snapped {
-    background-color: rgb(218, 251, 218);
+    background-color: rgb(40, 50, 82, 0.1);
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+  }
+
+  .img {
+    border-radius: 0.4rem;
+    min-height: 200px;
+    display: flex;
+    overflow: hidden;
+
+    img {
+      border-radius: inherit;
+      width: 100%;
+      object-fit: cover;
+      transition: all 0.3s ease;
+    }
+  }
+
+  .img,
+  h4 {
+    margin-bottom: 0.5rem;
+  }
+  p {
+    margin-bottom: 1rem;
+  }
+
+  button {
+    border: 1px solid #eee;
+    border-radius: 0.2rem;
+    background-color: #283252;
+    color: #fff;
+  }
+
+  @media screen and (min-width: 768px) {
+    button {
+      background-color: #fff;
+      color: #283252;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #283252;
+        color: #fff;
+        transform: translateY(2px);
+      }
+    }
   }
 }

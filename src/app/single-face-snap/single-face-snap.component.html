@@ -1,0 +1,34 @@
+<div class="single-face-snap">
+  <div class="container">
+    <button class="back" (click)="onNavigateBack()">
+      <img src="assets/images/back.png" alt="back icon" />
+      <span>Back</span>
+    </button>
+
+    <div class="snap-face" [ngClass]="{ snapped: faceSnap.snapped }">
+      <h3>{{ faceSnap.title | uppercase }}</h3>
+      <p class="snap-face-creation">
+        mise en ligne {{ faceSnap.createdDate | date : "longDate" }}
+      </p>
+      <div class="img">
+        <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title" />
+      </div>
+      <p class="snap-face-description">{{ faceSnap.description }}</p>
+      <p class="snap-face-location" *ngIf="faceSnap.localisation">
+        Photo prise à {{ faceSnap.localisation }}
+      </p>
+
+      <p class="snap-face-btn">
+        <button (click)="onSnap()">
+          {{ faceSnap.snapped ? "Oops unSnap !" : "Oh Snap !" }}
+        </button>
+        <span
+          [ngStyle]="{
+            color: 'rgb(0,' + faceSnap.snaps / 3 + ', 0)'
+          }"
+          >{{ faceSnap.snaps }}🧡</span
+        >
+      </p>
+    </div>
+  </div>
+</div>

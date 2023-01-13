@@ -1,4 +1,10 @@
-<app-face-snap
-  *ngFor="let faceSnap of faceSnaps"
-  [faceSnap]="faceSnap"
-></app-face-snap>
+<div class="face-snap-list">
+  <div class="container">
+    <div class="face-snap-list-content">
+      <app-face-snap
+        *ngFor="let faceSnap of faceSnaps"
+        [faceSnap]="faceSnap"
+      ></app-face-snap>
+    </div>
+  </div>
+</div>

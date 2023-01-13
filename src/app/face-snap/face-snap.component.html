@@ -1,8 +1,11 @@
 <div class="face-snap-card" [ngClass]="{ snapped: faceSnap.snapped }">
-  <h2>{{ faceSnap.title | uppercase }}</h2>
-  <p>mise en ligne {{ faceSnap.createdDate | date : "longDate" }}</p>
-  <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title" />
+  <div class="img">
+    <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title" />
+  </div>
+  <h4>{{ faceSnap.title | uppercase }}</h4>
   <p>{{ faceSnap.description }}</p>
+  <button (click)="onNavigateToSignleFaceSnap()">View</button>
+  <!-- <p>mise en ligne {{ faceSnap.createdDate | date : "longDate" }}</p>
   <p *ngIf="faceSnap.localisation">Photo prise à {{ faceSnap.localisation }}</p>
   <p>
     <button (click)="onSnap()">
@@ -15,5 +18,5 @@
       >🧡{{ faceSnap.snaps }}</span
     >
   </p>
-  <p>{{ 0.47 | percent }}</p>
+  <p>{{ 0.47 | percent }}</p> -->
 </div>

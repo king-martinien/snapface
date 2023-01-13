@@ -1,0 +1,25 @@
+.face-snap-list {
+  padding: 10rem 0 3rem;
+
+  &-content {
+    padding: 1rem;
+    border-radius: 0.4rem;
+    background-color: #f7f7f7;
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  @media screen and (min-width: 540px) {
+    &-content {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &-content {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+  }
+}
